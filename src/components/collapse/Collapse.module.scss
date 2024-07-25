@@ -1,0 +1,124 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_variables";
+@use "../../styles/utils/_breakpoints";
+
+// Style Collapse :
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 90%;
+
+  @include breakpoints.custom-media-query(1140) {
+    width: 100%;
+  }
+
+  &__collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$quinary;
+    padding: 15px;
+    border-radius: 5px;
+    width: 97%;
+    z-index: 1;
+
+    @include breakpoints.custom-media-query(768) {
+      padding: 12px;
+    }
+
+    @include breakpoints.custom-media-query(600) {
+      padding: 10px;
+    }
+
+    h3 {
+      color: variables.$tertiary;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 2px;
+
+      @include breakpoints.custom-media-query(768) {
+        font-size: 20px;
+      }
+
+      @include breakpoints.custom-media-query(600) {
+        font-size: 18px;
+      }
+    }
+
+    img {
+      width: auto;
+      cursor: pointer;
+
+      @include breakpoints.custom-media-query(768) {
+        width: 25px;
+      }
+
+      &.toggleUp {
+        transform: rotate(-180deg);
+        transition: 0.5s;
+      }
+
+      &.toggleDown {
+        transform: rotate(0deg);
+        transition: 0.5s;
+      }
+    }
+  }
+
+  &__content {
+    background-color: variables.$primary;
+    width: 97%;
+    height: auto;
+    border-radius: 0px 0px 10px 10px;
+    opacity: 1;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
+
+    &__active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    &__text {
+      margin: 20px;
+
+      p {
+        color: variables.$senary;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+
+        @include breakpoints.custom-media-query(768) {
+          font-size: 18px;
+        }
+
+        @include breakpoints.custom-media-query(600) {
+          font-size: 16px;
+        }
+      }
+
+      ul {
+        color: variables.$quinary;
+        list-style: none;
+        gap: 5px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+
+        @include breakpoints.custom-media-query(768) {
+          font-size: 18px;
+        }
+
+        @include breakpoints.custom-media-query(600) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

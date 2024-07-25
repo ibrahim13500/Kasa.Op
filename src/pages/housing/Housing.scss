@@ -1,0 +1,67 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_breakpoints";
+
+// Style Housing :
+.container__main {
+  margin: 50px 30px;
+
+  @include breakpoints.custom-media-query(600) {
+    margin: 50px 15px;
+  }
+
+  @include breakpoints.custom-media-query(360) {
+    margin: 50px 5px;
+  }
+
+  &__sectionHousing {
+    display: block;
+
+    &__containerContent {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      @include breakpoints.custom-media-query(768) {
+        display: block;
+      }
+
+      &__propertyInfoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 10px;
+        gap: 15px;
+      }
+
+      &__hostInfoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 10px;
+        gap: 15px;
+
+        @include breakpoints.custom-media-query(768) {
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    &__collapse {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 60px;
+
+      @include breakpoints.custom-media-query(800) {
+        flex-direction: column;
+        gap: 0px;
+      }
+    }
+  }
+}

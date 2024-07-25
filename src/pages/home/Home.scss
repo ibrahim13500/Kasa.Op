@@ -1,0 +1,33 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/variables";
+@use "../../styles/utils/breakpoints";
+
+// Style Home :
+.container__main {
+  margin: 50px 100px;
+
+  @include breakpoints.custom-media-query(1140) {
+    margin: 50px 30px;
+  }
+
+  @include breakpoints.custom-media-query(500) {
+    margin: 50px 10px;
+  }
+
+  &__sectionCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    background-color: variables.$primary;
+    border-radius: 25px;
+    padding: 50px;
+    margin-top: 50px;
+
+    @include breakpoints.custom-media-query(650) {
+      background: none;
+      padding: 5px;
+    }
+  }
+}

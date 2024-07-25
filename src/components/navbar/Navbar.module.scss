@@ -1,0 +1,108 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_variables";
+@use "../../styles/utils/_breakpoints";
+
+// Style navbar :
+.container__header {
+  margin: 50px 100px;
+
+  @include breakpoints.custom-media-query(1140) {
+    margin: 30px 30px;
+  }
+
+  @include breakpoints.custom-media-query(400) {
+    margin: 5px 30px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoints.custom-media-query(400) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    img {
+      width: 210px;
+      height: 68px;
+      cursor: pointer;
+
+      @include breakpoints.custom-media-query(1140) {
+        width: 180px;
+      }
+
+      @include breakpoints.custom-media-query(800) {
+        width: 150px;
+      }
+
+      @include breakpoints.custom-media-query(600) {
+        width: 130px;
+      }
+
+      @include breakpoints.custom-media-query(500) {
+        width: 120px;
+      }
+
+      @include breakpoints.custom-media-query(400) {
+        width: 130px;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      list-style: none;
+
+      @include breakpoints.custom-media-query(800) {
+        gap: 70px;
+      }
+
+      @include breakpoints.custom-media-query(600) {
+        gap: 50px;
+      }
+
+      @include breakpoints.custom-media-query(500) {
+        gap: 30px;
+      }
+
+      @include breakpoints.custom-media-query(400) {
+        gap: 50px;
+      }
+
+      a {
+        text-decoration: none;
+
+        &.active {
+          border-bottom: solid 2px variables.$senary;
+        }
+
+        li {
+          font-size: 24px;
+          font-weight: 500;
+          color: variables.$senary;
+
+          @include breakpoints.custom-media-query(800) {
+            font-size: 22px;
+          }
+
+          @include breakpoints.custom-media-query(600) {
+            font-size: 20px;
+          }
+
+          @include breakpoints.custom-media-query(500) {
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+
+          @include breakpoints.custom-media-query(400) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

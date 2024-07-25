@@ -1,0 +1,51 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/variables";
+@use "../../styles/utils/breakpoints";
+
+// Style banner :
+.section__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 100%;
+  height: 230px;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: variables.$secondary !important;
+  background-blend-mode: darken;
+
+  @include breakpoints.custom-media-query(500) {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  & h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: variables.$tertiary;
+
+    @include breakpoints.custom-media-query(800) {
+      font-size: 40px;
+    }
+
+    @include breakpoints.custom-media-query(650) {
+      font-size: 35px;
+    }
+
+    @include breakpoints.custom-media-query(550) {
+      font-size: 30px;
+    }
+
+    @include breakpoints.custom-media-query(500) {
+      font-size: 35px;
+      width: 280px;
+    }
+
+    @include breakpoints.custom-media-query(320) {
+      font-size: 30px;
+      width: 235px;
+    }
+  }
+}

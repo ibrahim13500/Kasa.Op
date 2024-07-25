@@ -1,0 +1,23 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/breakpoints";
+
+// Style About :
+.container__main {
+  margin: 50px 100px;
+
+  @include breakpoints.custom-media-query(1140) {
+    margin: 50px 30px;
+  }
+
+  @include breakpoints.custom-media-query(600) {
+    margin: 50px 10px;
+  }
+
+  section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
