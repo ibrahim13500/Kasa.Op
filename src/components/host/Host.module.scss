@@ -1,0 +1,40 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_variables";
+@use "../../styles/utils/_breakpoints";
+
+// Style host :
+.container__host {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: variables.$quinary;
+    width: 45%;
+    line-height: 25px;
+
+    @include breakpoints.custom-media-query(430) {
+      width: 45%;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+    @include breakpoints.custom-media-query(430) {
+      width: 70px;
+      height: 70px;
+    }
+
+    @include breakpoints.custom-media-query(360) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

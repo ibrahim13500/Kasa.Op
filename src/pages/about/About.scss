@@ -13,11 +13,23 @@
     margin: 50px 10px;
   }
 
-  section {
+  .about__section {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent; // Exemple de style spécifique
+    padding: 20px;
+    border-radius: 15px;
+
+    @include breakpoints.custom-media-query(1140) {
+      background-color: #e0e0e0;
+    }
+
+    @include breakpoints.custom-media-query(600) {
+      background-color: transparent;
+      padding: 10px;
+    }
   }
 }

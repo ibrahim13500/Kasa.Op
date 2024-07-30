@@ -25,9 +25,22 @@
     padding: 50px;
     margin-top: 50px;
 
+    > * {
+      flex: 1 1 calc(33.333% - 80px); // Trois éléments par ligne
+
+      @include breakpoints.custom-media-query(1140) {
+        flex: 1 1 calc(50% - 80px); // Deux éléments par ligne pour les écrans moyens
+      }
+
+      @include breakpoints.custom-media-query(650) {
+        flex: 1 1 100%; // Un élément par ligne pour les petits écrans
+      }
+    }
+
     @include breakpoints.custom-media-query(650) {
       background: none;
       padding: 5px;
+      gap: 20px;
     }
   }
 }

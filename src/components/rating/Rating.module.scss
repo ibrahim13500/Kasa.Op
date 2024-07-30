@@ -1,0 +1,27 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_variables";
+@use "../../styles/utils/_breakpoints";
+
+// Style rating :
+.container__rating {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  @include breakpoints.custom-media-query(400) {
+    gap: 3px;
+  }
+
+  i {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  &__pinkStar {
+    color: variables.$quinary;
+  }
+
+  &__grayStar {
+    color: variables.$septenary;
+  }
+}

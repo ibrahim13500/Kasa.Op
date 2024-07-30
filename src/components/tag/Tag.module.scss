@@ -1,0 +1,25 @@
+// importation des fichier nécessaire au style :
+@use "../../styles/utils/_variables";
+
+// Style tag :
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+
+  &__tag {
+    background-color: variables.$quinary;
+    border-radius: 10px;
+    padding: 8px 10px;
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: variables.$tertiary;
+      font-weight: 500;
+    }
+  }
+}

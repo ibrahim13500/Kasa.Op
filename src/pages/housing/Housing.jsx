@@ -1,7 +1,13 @@
 // Importation des modules nécessaires :
-import  "./Housing.scss";
+import housingStyle from  "./Housing.module.scss";
 import { useParams } from "react-router-dom";
 import { useApiCallHousing } from "../../hook/useApiCallHousing.jsx";
+import Carrousel from "../../components/carrousel/Carrousel.jsx";
+import Location from "../../components/location/Location.jsx";
+import Host from "../../components/host/Host.jsx";
+import Tag from "../../components/tag/Tag.jsx";
+import Rating from "../../components/rating/Rating.jsx";
+import Collapse from "../../components/collapse/Collapse.jsx";
 
 
 // Définition du composant Housing :
